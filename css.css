@@ -26,3 +26,12 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.list-group-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.align-bottom {
+    vertical-align: bottom;
+}
