@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="../css.css">
-    <link rel="stylesheet" href="../scss.scss">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body class="day-mode">
     <button id="toggleButton" class="btn btn-outline-light position-fixed top-0 end-0 m-3 theme-toggle">🌙</button>
@@ -29,42 +27,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-    <script>
-        document.getElementById('toggleButton').addEventListener('click', function () {
-            const body = document.body;
-            body.classList.toggle('night-mode');
-            body.classList.toggle('day-mode');
-            
-            const isNightMode = body.classList.contains('night-mode');
-            const toggleButton = document.getElementById('toggleButton');
-            toggleButton.textContent = isNightMode ? '☀️' : '🌙';
-
-            const buttons = document.querySelectorAll('.theme-toggle');
-            buttons.forEach(button => {
-                button.classList.toggle('btn-outline-dark', !isNightMode);
-                button.classList.toggle('btn-outline-light', isNightMode);
-            });
-
-            localStorage.setItem('theme', isNightMode ? 'night' : 'day');
-        });
-
-        window.addEventListener('load', function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.body.classList.add(savedTheme === 'night' ? 'night-mode' : 'day-mode');
-                document.body.classList.remove(savedTheme === 'night' ? 'day-mode' : 'night-mode');
-                
-                const isNightMode = savedTheme === 'night';
-                const toggleButton = document.getElementById('toggleButton');
-                toggleButton.textContent = isNightMode ? '☀️' : '🌙';
-
-                const buttons = document.querySelectorAll('.theme-toggle');
-                buttons.forEach(button => {
-                    button.classList.toggle('btn-outline-dark', !isNightMode);
-                    button.classList.toggle('btn-outline-light', isNightMode);
-                });
-            }
-        });
-    </script>
+    <script src="../theme-toggle.js"></script>
 </body>
 </html>
