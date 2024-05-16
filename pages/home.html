@@ -20,10 +20,10 @@
         <p class="list-group-item list-group-item-dark">Browse through the pages to learn about me!</p>
         <hr>
         <div class="d-flex flex-wrap justify-content-center">
-            <a href="../pages/about.html" class="btn btn-outline-dark m-1">👑 About</a>
-            <a href="../pages/hobbies.html" class="btn btn-outline-dark m-1">🏆 Hobbies</a>
-            <a href="../pages/music.html" class="btn btn-outline-dark m-1">🎵 Music</a>
-            <a href="../pages/projects.html" class="btn btn-outline-dark m-1">📂 Projects</a>
+            <a href="../pages/about.html" class="btn btn-outline-dark m-1 theme-toggle">👑 About</a>
+            <a href="../pages/hobbies.html" class="btn btn-outline-dark m-1 theme-toggle">🏆 Hobbies</a>
+            <a href="../pages/music.html" class="btn btn-outline-dark m-1 theme-toggle">🎵 Music</a>
+            <a href="../pages/projects.html" class="btn btn-outline-dark m-1 theme-toggle">📂 Projects</a>
         </div>
     </div>
 
@@ -39,6 +39,12 @@
             const toggleButton = document.getElementById('toggleButton');
             toggleButton.textContent = isNightMode ? '☀️' : '🌙';
 
+            const buttons = document.querySelectorAll('.theme-toggle');
+            buttons.forEach(button => {
+                button.classList.toggle('btn-outline-dark', !isNightMode);
+                button.classList.toggle('btn-outline-light', isNightMode);
+            });
+
             localStorage.setItem('theme', isNightMode ? 'night' : 'day');
         });
 
@@ -48,8 +54,15 @@
                 document.body.classList.add(savedTheme === 'night' ? 'night-mode' : 'day-mode');
                 document.body.classList.remove(savedTheme === 'night' ? 'day-mode' : 'night-mode');
                 
+                const isNightMode = savedTheme === 'night';
                 const toggleButton = document.getElementById('toggleButton');
-                toggleButton.textContent = savedTheme === 'night' ? '☀️' : '🌙';
+                toggleButton.textContent = isNightMode ? '☀️' : '🌙';
+
+                const buttons = document.querySelectorAll('.theme-toggle');
+                buttons.forEach(button => {
+                    button.classList.toggle('btn-outline-dark', !isNightMode);
+                    button.classList.toggle('btn-outline-light', isNightMode);
+                });
             }
         });
     </script>
