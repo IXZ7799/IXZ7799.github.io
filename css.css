@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background-color: #90091c;
+    opacity: 0.9;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-group .btn img {
+    margin-right: 8px;
+}
+
+.btn-group .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
