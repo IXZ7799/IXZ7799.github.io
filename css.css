@@ -1,20 +1,19 @@
-body {
+body.day-mode {
+    background-color: white;
+    color: black;
+}
+
+body.night-mode {
     background-color: black;
+    color: white;
+}
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-}
-
-.card {
-    opacity: 0.9;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .btn-group .btn img {
@@ -30,8 +29,4 @@ body {
 .list-group-item a {
     color: inherit;
     text-decoration: none;
-}
-
-.align-bottom {
-    vertical-align: bottom;
 }
