@@ -1,13 +1,3 @@
-body.day-mode {
-    background-color: white;
-    color: black;
-}
-
-body.night-mode {
-    background-color: black;
-    color: white;
-}
-
 body {
     display: flex;
     justify-content: center;
