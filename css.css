@@ -8,7 +8,6 @@ body {
 }
 
 .card {
-    background-color: #90091c;
     opacity: 0.9;
     transition: transform 0.3s, box-shadow 0.3s;
 }
