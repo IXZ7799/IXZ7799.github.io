@@ -20,3 +20,12 @@ body {
     color: inherit;
     text-decoration: none;
 }
+
+.nav-pills .nav-link {
+    color: black;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #ddd;
+    color: black;
+}
