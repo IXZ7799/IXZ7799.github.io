@@ -4,6 +4,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .btn-group .btn img {
@@ -22,15 +24,19 @@ body {
 }
 
 .nav-pills .nav-link {
-    color: black;
+    color: #ffffff;
 }
 
 .nav-pills .nav-link:hover {
-    background-color: #e3e1e1 !important;
-    color: black !important;
+    background-color: #ede9e9;
+    color: #000000;
 }
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+hr {
+    border-color: #555555;
 }
