@@ -26,8 +26,8 @@ body {
 }
 
 .nav-pills .nav-link:hover {
-    background-color: #262525;
-    color: black;
+    background-color: #262525 !important;
+    color: white;
 }
 
 .tooltip:hover .tooltiptext {
